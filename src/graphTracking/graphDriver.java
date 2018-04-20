@@ -289,7 +289,10 @@ public class graphDriver
 		DefaultWeightedEdge e56 = graph.addEdge("51PipeExit", "51End");
 		
 		//Level 5-1 weights
-		
+		graph.setEdgeWeight(e53, 198);
+		graph.setEdgeWeight(e54, 155);
+		graph.setEdgeWeight(e55, 11);
+		graph.setEdgeWeight(e56, 36);
 		
 		//Level 5-2 vertices
 		graph.addVertex("52Start");
@@ -309,7 +312,13 @@ public class graphDriver
 		DefaultWeightedEdge e63 = graph.addEdge("52BeanExit", "52End");
 				
 		//Level 5-2 weights
-		
+		graph.setEdgeWeight(e57, 199);
+		graph.setEdgeWeight(e58, 54);
+		graph.setEdgeWeight(e59, 84);
+		graph.setEdgeWeight(e60, 60);
+		graph.setEdgeWeight(e61, 85);
+		graph.setEdgeWeight(e62, 57);
+		graph.setEdgeWeight(e63, 70);
 		
 		//Level 5-3 vertices
 		graph.addVertex("53Start");
@@ -319,7 +328,7 @@ public class graphDriver
 		DefaultWeightedEdge e64 = graph.addEdge("53Start", "53End");
 				
 		//Level 5-3 weights
-		
+		graph.setEdgeWeight(e64, 151);
 		
 		//Level 5-4 vertices
 		graph.addVertex("54Start");
@@ -329,7 +338,7 @@ public class graphDriver
 		DefaultWeightedEdge e65 = graph.addEdge("54Start", "54End");
 				
 		//Level 5-4 weights
-		
+		graph.setEdgeWeight(e65, 140);
 		
 		//Level 6-1 vertices
 		graph.addVertex("61Start");
@@ -339,7 +348,7 @@ public class graphDriver
 		DefaultWeightedEdge e66 = graph.addEdge("61Start", "61End");
 			
 		//Level 6-1 weights
-				
+		graph.setEdgeWeight(e66, 185);
 				
 		//Level 6-2 vertices
 		graph.addVertex("62Start");
@@ -368,7 +377,7 @@ public class graphDriver
 		
 		DefaultWeightedEdge e77 = graph.addEdge("62Pipe2Ent", "62Pipe2Exit");
 		DefaultWeightedEdge e78 = graph.addEdge("62Pipe2Exit", "62End");
-		DefaultWeightedEdge e79 = graph.addEdge("62Pipe2Exit", "62BeanEnt");
+		DefaultWeightedEdge e79 = graph.addEdge("62Pipe2Exit", "62Pipe3Ent");
 
 		DefaultWeightedEdge e80 = graph.addEdge("62Pipe3Ent", "62Pipe3Exit");
 		DefaultWeightedEdge e81 = graph.addEdge("62Pipe3Exit", "62End");
@@ -377,7 +386,27 @@ public class graphDriver
 		DefaultWeightedEdge e83 = graph.addEdge("62BeanExit", "62End");
 		
 		//Level 6-2 weights
-				
+		graph.setEdgeWeight(e67, 215);
+		graph.setEdgeWeight(e68, 18);
+		graph.setEdgeWeight(e69, 55);
+		graph.setEdgeWeight(e70, 152);
+		graph.setEdgeWeight(e71, 80);
+		
+		graph.setEdgeWeight(e72, 11);
+		graph.setEdgeWeight(e73, 181);
+		graph.setEdgeWeight(e74, 46);
+		graph.setEdgeWeight(e75, 21);
+		graph.setEdgeWeight(e76, 118);
+		
+		graph.setEdgeWeight(e77, 61);
+		graph.setEdgeWeight(e78, 101);
+		graph.setEdgeWeight(e79, 38);
+		
+		graph.setEdgeWeight(e80, 11);
+		graph.setEdgeWeight(e81, 37);
+		
+		graph.setEdgeWeight(e82, 78);
+		graph.setEdgeWeight(e83, 54);
 				
 		//Level 6-3 vertices
 		graph.addVertex("63Start");
@@ -387,7 +416,7 @@ public class graphDriver
 		DefaultWeightedEdge e84 = graph.addEdge("63Start", "63End");
 						
 		//Level 6-3 weights
-				
+		graph.setEdgeWeight(e84, 166);
 				
 		//Level 6-4 vertices
 		graph.addVertex("64Start");
@@ -397,7 +426,7 @@ public class graphDriver
 		DefaultWeightedEdge e85 = graph.addEdge("64Start", "64End");
 						
 		//Level 6-4 weights
-		
+		graph.setEdgeWeight(e85, 140);
 		
 		//Level 7-1 vertices
 		graph.addVertex("71Start");
@@ -412,7 +441,10 @@ public class graphDriver
 		DefaultWeightedEdge e89 = graph.addEdge("71PipeExit", "71End");
 			
 		//Level 7-1 weights
-				
+		graph.setEdgeWeight(e86, 178);
+		graph.setEdgeWeight(e87, 92);
+		graph.setEdgeWeight(e88, 11);
+		graph.setEdgeWeight(e89, 64);
 				
 		//Level 7-2 vertices
 		graph.addVertex("72Start");
@@ -422,7 +454,7 @@ public class graphDriver
 		DefaultWeightedEdge e90 = graph.addEdge("72Start", "72End");
 						
 		//Level 7-2 weights
-				
+		graph.setEdgeWeight(e90, 205);
 				
 		//Level 7-3 vertices
 		graph.addVertex("73Start");
@@ -432,7 +464,7 @@ public class graphDriver
 		DefaultWeightedEdge e91 = graph.addEdge("73Start", "73End");
 						
 		//Level 7-3 weights
-				
+		graph.setEdgeWeight(e91, 224);
 				
 		//Level 7-4 vertices
 		graph.addVertex("74Start");
@@ -442,7 +474,7 @@ public class graphDriver
 		DefaultWeightedEdge e92 = graph.addEdge("74Start", "74End");
 						
 		//Level 7-4 weights
-		
+		graph.setEdgeWeight(e92, 204);
 		
 		//Level 8-1 vertices
 		graph.addVertex("81Start");
@@ -457,7 +489,10 @@ public class graphDriver
 		DefaultWeightedEdge e96 = graph.addEdge("81PipeExit", "81End");
 			
 		//Level 8-1 weights
-				
+		graph.setEdgeWeight(e93, 375);
+		graph.setEdgeWeight(e94, 103);
+		graph.setEdgeWeight(e95, 11);
+		graph.setEdgeWeight(e96, 261);
 				
 		//Level 8-2 vertices
 		graph.addVertex("82Start");
@@ -472,7 +507,10 @@ public class graphDriver
 		DefaultWeightedEdge e100 = graph.addEdge("82PipeExit", "82End");
 						
 		//Level 8-2 weights
-				
+		graph.setEdgeWeight(e97, 215);
+		graph.setEdgeWeight(e98, 155);
+		graph.setEdgeWeight(e99, 11);
+		graph.setEdgeWeight(e100, 53);
 				
 		//Level 8-3 vertices
 		graph.addVertex("83Start");
@@ -482,7 +520,7 @@ public class graphDriver
 		DefaultWeightedEdge e101 = graph.addEdge("83Start", "83End");
 						
 		//Level 8-3 weights
-				
+		graph.setEdgeWeight(e101, 213);
 				
 		//Level 8-4 vertices
 		graph.addVertex("84Start");
@@ -549,69 +587,159 @@ public class graphDriver
 		DefaultWeightedEdge e127 = graph.addEdge("84D", "84E");
 		DefaultWeightedEdge e128 = graph.addEdge("84D", "84Pipe3Ent");
 		DefaultWeightedEdge e129 = graph.addEdge("84D", "84FakePipe3");
+		
+		DefaultWeightedEdge e130 = graph.addEdge("84Pipe3Ent", "84Pipe3Exit");
 						
-		DefaultWeightedEdge e130 = graph.addEdge("84Pipe3Exit", "84FakePipe4");
-		DefaultWeightedEdge e131 = graph.addEdge("84Pipe3Exit", "84End");
+		DefaultWeightedEdge e131 = graph.addEdge("84Pipe3Exit", "84FakePipe4");
+		DefaultWeightedEdge e132 = graph.addEdge("84Pipe3Exit", "84End");
 		
 		//Level 8-4 weights
+		graph.setEdgeWeight(e102, 80);
+		graph.setEdgeWeight(e103, 50);
+		graph.setEdgeWeight(e104, 95);
 		
+		graph.setEdgeWeight(e105, 32);
+		graph.setEdgeWeight(e106, 113);
+		graph.setEdgeWeight(e107, 193);
+		graph.setEdgeWeight(e108, 247);
+		
+		graph.setEdgeWeight(e109, 32);
+		graph.setEdgeWeight(e110, 77);
+		graph.setEdgeWeight(e111, 62);
+		
+		graph.setEdgeWeight(e112, 65);
+		graph.setEdgeWeight(e113, 50);
+		graph.setEdgeWeight(e114, 20);
+		
+		graph.setEdgeWeight(e115, 65);
+		
+		graph.setEdgeWeight(e116, 34);
+		
+		graph.setEdgeWeight(e117, 17);
+		graph.setEdgeWeight(e118, 37);
+		graph.setEdgeWeight(e119, 45);
+		
+		graph.setEdgeWeight(e120, 65);
+		
+		graph.setEdgeWeight(e121, 57);
+		graph.setEdgeWeight(e122, 65);
+		
+		graph.setEdgeWeight(e123, 43);
+		
+		graph.setEdgeWeight(e124, 33);
+		graph.setEdgeWeight(e125, 60);
+		
+		graph.setEdgeWeight(e126, 64);
+		
+		graph.setEdgeWeight(e127, 64);
+		graph.setEdgeWeight(e128, 37);
+		graph.setEdgeWeight(e129, 21);
+		
+		graph.setEdgeWeight(e130, 64);
+		
+		graph.setEdgeWeight(e131, 7);
+		graph.setEdgeWeight(e132, 42);
 		
 		// Warp zone edges
-		 DefaultWeightedEdge e132 = graph.addEdge("12Warp2", "21Start");
-		 DefaultWeightedEdge e133 = graph.addEdge("12Warp3", "31Start");
-		 DefaultWeightedEdge e134 = graph.addEdge("12Warp4", "41Start");
+		 DefaultWeightedEdge e133 = graph.addEdge("12Warp2", "21Start");
+		 DefaultWeightedEdge e134 = graph.addEdge("12Warp3", "31Start");
+		 DefaultWeightedEdge e135 = graph.addEdge("12Warp4", "41Start");
 		 
-		 DefaultWeightedEdge e135 = graph.addEdge("42Warp5", "51Start");
-		 DefaultWeightedEdge e136 = graph.addEdge("42Warp6", "61Start");
-		 DefaultWeightedEdge e137 = graph.addEdge("42Warp7", "71Start");
-		 DefaultWeightedEdge e138 = graph.addEdge("42Warp8", "81Start");
+		 DefaultWeightedEdge e136 = graph.addEdge("42Warp5", "51Start");
+		 DefaultWeightedEdge e137 = graph.addEdge("42Warp6", "61Start");
+		 DefaultWeightedEdge e138 = graph.addEdge("42Warp7", "71Start");
+		 DefaultWeightedEdge e139 = graph.addEdge("42Warp8", "81Start");
 		 
 		 
 		 //Warp zone weights
+		 graph.setEdgeWeight(e133, 0);
+		 graph.setEdgeWeight(e134, 0);
+		 graph.setEdgeWeight(e135, 0);
 		 
+		 graph.setEdgeWeight(e136, 0);
+		 graph.setEdgeWeight(e137, 0);
+		 graph.setEdgeWeight(e138, 0);
+		 graph.setEdgeWeight(e139, 0);
 		 
 		 //Level transition edges
-		 DefaultWeightedEdge e139 = graph.addEdge("11End", "12Start");
-		 DefaultWeightedEdge e140 = graph.addEdge("12End", "13Start");
-		 DefaultWeightedEdge e141 = graph.addEdge("13End", "14Start");
-		 DefaultWeightedEdge e142 = graph.addEdge("14End", "21Start");
+		 DefaultWeightedEdge e140 = graph.addEdge("11End", "12Start");
+		 DefaultWeightedEdge e141 = graph.addEdge("12End", "13Start");
+		 DefaultWeightedEdge e142 = graph.addEdge("13End", "14Start");
+		 DefaultWeightedEdge e143 = graph.addEdge("14End", "21Start");
 		 
-		 DefaultWeightedEdge e143 = graph.addEdge("21End", "22Start");
-		 DefaultWeightedEdge e144 = graph.addEdge("22End", "23Start");
-		 DefaultWeightedEdge e145 = graph.addEdge("23End", "24Start");
-		 DefaultWeightedEdge e146 = graph.addEdge("24End", "31Start");
+		 DefaultWeightedEdge e144 = graph.addEdge("21End", "22Start");
+		 DefaultWeightedEdge e145 = graph.addEdge("22End", "23Start");
+		 DefaultWeightedEdge e146 = graph.addEdge("23End", "24Start");
+		 DefaultWeightedEdge e147 = graph.addEdge("24End", "31Start");
 		 
-		 DefaultWeightedEdge e147 = graph.addEdge("31End", "32Start");
-		 DefaultWeightedEdge e148 = graph.addEdge("32End", "33Start");
-		 DefaultWeightedEdge e149 = graph.addEdge("33End", "34Start");
-		 DefaultWeightedEdge e150 = graph.addEdge("34End", "41Start");
+		 DefaultWeightedEdge e148 = graph.addEdge("31End", "32Start");
+		 DefaultWeightedEdge e149 = graph.addEdge("32End", "33Start");
+		 DefaultWeightedEdge e150 = graph.addEdge("33End", "34Start");
+		 DefaultWeightedEdge e151 = graph.addEdge("34End", "41Start");
 		 
-		 DefaultWeightedEdge e151 = graph.addEdge("41End", "42Start");
-		 DefaultWeightedEdge e152 = graph.addEdge("42End", "43Start");
-		 DefaultWeightedEdge e153 = graph.addEdge("43End", "44Start");
-		 DefaultWeightedEdge e154 = graph.addEdge("44End", "51Start");
+		 DefaultWeightedEdge e152 = graph.addEdge("41End", "42Start");
+		 DefaultWeightedEdge e153 = graph.addEdge("42End", "43Start");
+		 DefaultWeightedEdge e154 = graph.addEdge("43End", "44Start");
+		 DefaultWeightedEdge e155 = graph.addEdge("44End", "51Start");
 		 
-		 DefaultWeightedEdge e155 = graph.addEdge("51End", "52Start");
-		 DefaultWeightedEdge e156 = graph.addEdge("52End", "53Start");
-		 DefaultWeightedEdge e157 = graph.addEdge("53End", "54Start");
-		 DefaultWeightedEdge e158 = graph.addEdge("54End", "61Start");
+		 DefaultWeightedEdge e156 = graph.addEdge("51End", "52Start");
+		 DefaultWeightedEdge e157 = graph.addEdge("52End", "53Start");
+		 DefaultWeightedEdge e158 = graph.addEdge("53End", "54Start");
+		 DefaultWeightedEdge e159 = graph.addEdge("54End", "61Start");
 		 
-		 DefaultWeightedEdge e159 = graph.addEdge("61End", "62Start");
-		 DefaultWeightedEdge e160 = graph.addEdge("62End", "63Start");
-		 DefaultWeightedEdge e161 = graph.addEdge("63End", "64Start");
-		 DefaultWeightedEdge e162 = graph.addEdge("64End", "71Start");
+		 DefaultWeightedEdge e160 = graph.addEdge("61End", "62Start");
+		 DefaultWeightedEdge e161 = graph.addEdge("62End", "63Start");
+		 DefaultWeightedEdge e162 = graph.addEdge("63End", "64Start");
+		 DefaultWeightedEdge e163 = graph.addEdge("64End", "71Start");
+		
+		 DefaultWeightedEdge e164 = graph.addEdge("71End", "72Start");
+		 DefaultWeightedEdge e165 = graph.addEdge("72End", "73Start");
+		 DefaultWeightedEdge e166 = graph.addEdge("73End", "74Start");
+		 DefaultWeightedEdge e167 = graph.addEdge("74End", "81Start");
 		 
-		 DefaultWeightedEdge e163 = graph.addEdge("71End", "72Start");
-		 DefaultWeightedEdge e164 = graph.addEdge("72End", "73Start");
-		 DefaultWeightedEdge e165 = graph.addEdge("73End", "74Start");
-		 DefaultWeightedEdge e166 = graph.addEdge("74End", "81Start");
-		 
-		 DefaultWeightedEdge e167 = graph.addEdge("81End", "82Start");
-		 DefaultWeightedEdge e168 = graph.addEdge("82End", "83Start");
-		 DefaultWeightedEdge e169 = graph.addEdge("83End", "84Start");
+		 DefaultWeightedEdge e168 = graph.addEdge("81End", "82Start");
+		 DefaultWeightedEdge e169 = graph.addEdge("82End", "83Start");
+		 DefaultWeightedEdge e170 = graph.addEdge("83End", "84Start");
 		 
 		 //Level transition weights
+		 graph.setEdgeWeight(e140, 0);
+		 graph.setEdgeWeight(e141, 0);
+		 graph.setEdgeWeight(e142, 0);
+		 graph.setEdgeWeight(e143, 0);
+
+		 graph.setEdgeWeight(e144, 0);
+		 graph.setEdgeWeight(e145, 0);
+		 graph.setEdgeWeight(e146, 0);
+		 graph.setEdgeWeight(e147, 0);
 		 
+		 graph.setEdgeWeight(e148, 0);
+		 graph.setEdgeWeight(e149, 0);
+		 graph.setEdgeWeight(e150, 0);
+		 graph.setEdgeWeight(e151, 0);
+		 
+		 graph.setEdgeWeight(e152, 0);
+		 graph.setEdgeWeight(e153, 0);
+		 graph.setEdgeWeight(e154, 0);
+		 graph.setEdgeWeight(e155, 0);
+		 
+		 graph.setEdgeWeight(e156, 0);
+		 graph.setEdgeWeight(e157, 0);
+		 graph.setEdgeWeight(e158, 0);
+		 graph.setEdgeWeight(e159, 0);
+		 
+		 graph.setEdgeWeight(e160, 0);
+		 graph.setEdgeWeight(e161, 0);
+		 graph.setEdgeWeight(e162, 0);
+		 graph.setEdgeWeight(e163, 0);
+		 
+		 graph.setEdgeWeight(e164, 0);
+		 graph.setEdgeWeight(e165, 0);
+		 graph.setEdgeWeight(e166, 0);
+		 graph.setEdgeWeight(e167, 0);
+		 
+		 graph.setEdgeWeight(e168, 0);
+		 graph.setEdgeWeight(e169, 0);
+		 graph.setEdgeWeight(e170, 0);
 		 
 		return graph;
 	}
