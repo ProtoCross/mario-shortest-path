@@ -15,7 +15,7 @@ public class graphDriver
 		System.out.println(graph.toString());
 	}
 	
-	//Create a weighted graph containing Mario levels, weighted by time needed to progress
+	//Create a weighted graph containing Mario levels, weighted by blocks traveled
 	private static SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> createGraph()
 	{
 		SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleDirectedWeightedGraph<String, DefaultWeightedEdge>(DefaultWeightedEdge.class);
@@ -33,7 +33,10 @@ public class graphDriver
 		DefaultWeightedEdge e4 = graph.addEdge("11PipeEnt", "11End");
 		
 		//Level 1-1 weights
-		
+		graph.setEdgeWeight(e1, 196);
+		graph.setEdgeWeight(e2, 55);
+		graph.setEdgeWeight(e3, 11);
+		graph.setEdgeWeight(e4, 35);
 		
 		//Level 1-2 vertices
 		graph.addVertex("12Start");
@@ -57,7 +60,16 @@ public class graphDriver
 		DefaultWeightedEdge e14 = graph.addEdge("12PipeExit", "12Warp4");
 		
 		//Level 1-2 weights
-		
+		graph.setEdgeWeight(e5, 170);
+		graph.setEdgeWeight(e6, 185);
+		graph.setEdgeWeight(e7, 189);
+		graph.setEdgeWeight(e8, 193);
+		graph.setEdgeWeight(e9, 101);
+		graph.setEdgeWeight(e10, 12);
+		graph.setEdgeWeight(e11, 57);
+		graph.setEdgeWeight(e12, 72);
+		graph.setEdgeWeight(e13, 77);
+		graph.setEdgeWeight(e14, 81);
 		
 		//Level 1-3 vertices
 		graph.addVertex("13Start");
@@ -67,7 +79,7 @@ public class graphDriver
 		DefaultWeightedEdge e15 = graph.addEdge("13Start", "13End");
 		
 		//Level 1-3 weights
-		
+		graph.setEdgeWeight(e15, 151);
 		
 		//Level 1-4 vertices
 		graph.addVertex("14Start");
@@ -77,6 +89,7 @@ public class graphDriver
 		DefaultWeightedEdge e16 = graph.addEdge("14Start", "14End");
 		
 		//Level 1-4 weights
+		graph.setEdgeWeight(e16, 140);
 		
 		//Level 2-1 vertices
 		graph.addVertex("21Start");
@@ -96,7 +109,13 @@ public class graphDriver
 		DefaultWeightedEdge e23 = graph.addEdge("21BeanExit", "21End");
 		
 		//Level 2-1 weights
-		
+		graph.setEdgeWeight(e17, 199);
+		graph.setEdgeWeight(e18, 102);
+		graph.setEdgeWeight(e19, 82);
+		graph.setEdgeWeight(e20, 11);
+		graph.setEdgeWeight(e21, 85);
+		graph.setEdgeWeight(e22, 57);
+		graph.setEdgeWeight(e23, 39);
 		
 		//Level 2-2 vertices
 		graph.addVertex("22Start");
@@ -106,7 +125,7 @@ public class graphDriver
 		DefaultWeightedEdge e24 = graph.addEdge("22Start", "22End");
 		
 		//Level 2-2 weights
-		
+		graph.setEdgeWeight(e24, 205);
 		
 		//Level 2-3 vertices
 		graph.addVertex("23Start");
@@ -116,7 +135,7 @@ public class graphDriver
 		DefaultWeightedEdge e25 = graph.addEdge("23Start", "23End");
 		
 		//Level 2-3 weights
-		
+		graph.setEdgeWeight(e25, 224);
 		
 		//Level 2-4 vertices
 		graph.addVertex("24Start");
@@ -126,7 +145,7 @@ public class graphDriver
 		DefaultWeightedEdge e26 = graph.addEdge("24Start", "24End");
 		
 		//Level 2-4 weights
-		
+		graph.setEdgeWeight(e26, 140);
 		
 		//Level 3-1 vertices
 		graph.addVertex("31Start");
@@ -146,7 +165,13 @@ public class graphDriver
 		DefaultWeightedEdge e33 = graph.addEdge("31BeanExit", "31End");
 		
 		//Level 3-1 weights
-		
+		graph.setEdgeWeight(e27, 199);
+		graph.setEdgeWeight(e28, 37);
+		graph.setEdgeWeight(e29, 130);
+		graph.setEdgeWeight(e30, 11);
+		graph.setEdgeWeight(e31, 133);
+		graph.setEdgeWeight(e32, 78);
+		graph.setEdgeWeight(e33, 38);
 		
 		//Level 3-2 vertices
 		graph.addVertex("32Start");
@@ -156,7 +181,7 @@ public class graphDriver
 		DefaultWeightedEdge e34 = graph.addEdge("32Start", "32End");
 		
 		//Level 3-2 weights
-		
+		graph.setEdgeWeight(e34, 208);
 		
 		//Level 3-3 vertices
 		graph.addVertex("33Start");
@@ -166,7 +191,7 @@ public class graphDriver
 		DefaultWeightedEdge e35 = graph.addEdge("33Start", "33End");
 		
 		//Level 3-3 weights
-		
+		graph.setEdgeWeight(e35, 150);
 		
 		//Level 3-4 vertices
 		graph.addVertex("34Start");
@@ -176,7 +201,7 @@ public class graphDriver
 		DefaultWeightedEdge e36 = graph.addEdge("34Start", "34End");
 		
 		//Level 3-4 weights
-		
+		graph.setEdgeWeight(e36, 140);
 		
 		//Level 4-1 vertices
 		graph.addVertex("41Start");
@@ -191,7 +216,10 @@ public class graphDriver
 		DefaultWeightedEdge e40 = graph.addEdge("41PipeExit", "41End");
 		
 		//Level 4-1 weights
-		
+		graph.setEdgeWeight(e37, 224);
+		graph.setEdgeWeight(e38, 131);
+		graph.setEdgeWeight(e39, 11);
+		graph.setEdgeWeight(e40, 62);
 		
 		//Level 4-2 vertices
 		graph.addVertex("42Start");
@@ -217,7 +245,16 @@ public class graphDriver
 		DefaultWeightedEdge e50 = graph.addEdge("42BeanEnt", "42Warp8");
 		
 		//Level 4-2 weights
-		
+		graph.setEdgeWeight(e41, 206);
+		graph.setEdgeWeight(e42, 82);
+		graph.setEdgeWeight(e43, 62);
+		graph.setEdgeWeight(e44, 120);
+		graph.setEdgeWeight(e45, 11);
+		graph.setEdgeWeight(e46, 74);
+		graph.setEdgeWeight(e47, 91);
+		graph.setEdgeWeight(e48, 55);
+		graph.setEdgeWeight(e49, 60);
+		graph.setEdgeWeight(e50, 64);
 		
 		//Level 4-3 vertices
 		graph.addVertex("43Start");
@@ -227,17 +264,17 @@ public class graphDriver
 		DefaultWeightedEdge e51 = graph.addEdge("43Start", "43End");
 		
 		//Level 4-3 weights
-		
+		graph.setEdgeWeight(e51, 146);
 		
 		//Level 4-4 vertices
 		graph.addVertex("44Start");
 		graph.addVertex("44End");
 		
 		//Level 4-4 edges
-		DefaultWeightedEdge e52 = graph.addEdge("43Start", "43End");
+		DefaultWeightedEdge e52 = graph.addEdge("44Start", "44End");
 		
 		//Level 4-4 weights
-		
+		graph.setEdgeWeight(e52, 172);
 		
 		//Level 5-1 vertices
 		graph.addVertex("51Start");
