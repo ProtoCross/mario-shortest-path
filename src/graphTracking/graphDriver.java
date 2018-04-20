@@ -4,10 +4,8 @@ import java.util.Set;
 
 import org.jgrapht.*;
 import org.jgrapht.graph.*;
-import org.jgrapht.graph.DefaultEdge;
 import org.jgrapht.alg.shortestpath.BellmanFordShortestPath;
 import org.jgrapht.alg.shortestpath.DijkstraShortestPath;
-import org.jgrapht.alg.spanning.KruskalMinimumSpanningTree;
 import org.jgrapht.alg.shortestpath.ALTAdmissibleHeuristic;
 import org.jgrapht.alg.shortestpath.AStarShortestPath;
 
@@ -16,37 +14,50 @@ public class graphDriver
 
 	public static void main(String[] args) 
 	{
+		long start;
+		long end;
+		long aTime;
+		long bellmanTime;
+		long dijkstraTime;
+		
 		//Create graph and set of vertices
-		Graph<String, DefaultEdge> marioGraph = createGraph();
-		Graph<String, DefaultEdge> marioGraph2 = createGraph();
-		Graph<String, DefaultEdge> marioGraph3 = createGraph();
+		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph = createGraph();
+		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph2 = createGraph();
+		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph3 = createGraph();
 		Set<String> marioGraphVerts = marioGraph.vertexSet();
 		System.out.println(marioGraph.toString() +"\n");
 		
 		//A* Algorithm
-		ALTAdmissibleHeuristic<String, DefaultEdge> aStarHeuristic = new ALTAdmissibleHeuristic(marioGraph, marioGraphVerts);
-		AStarShortestPath<String, DefaultEdge> aStarAlg = new AStarShortestPath(marioGraph, aStarHeuristic);
+		start = System.nanoTime();
+		ALTAdmissibleHeuristic<String, DefaultEdge> aStarHeuristic = new ALTAdmissibleHeuristic<String, DefaultEdge>(marioGraph, marioGraphVerts);
+		AStarShortestPath<String, DefaultEdge> aStarAlg = new AStarShortestPath<String, DefaultEdge>(marioGraph, aStarHeuristic);
+		end = System.nanoTime();
+		aTime = end-start;
 		System.out.println("A* Heuristic: " + aStarHeuristic.getCostEstimate("11Start", "84End"));
-		System.out.println("A* Shortest Path:" + aStarAlg.getPath("11Start", "84End").getVertexList() +"\n");
+		System.out.println("A* Shortest Path:" + aStarAlg.getPath("11Start", "84End").getVertexList());
+		System.out.println("A* Time: " + aTime + "\n");
 		
 		//Bellman Ford Algorithm
+		start = System.nanoTime();
 		BellmanFordShortestPath<String, DefaultEdge> bellmanAlg = new BellmanFordShortestPath<String, DefaultEdge>(marioGraph2);
-		System.out.println("Bellman Ford Shortest Path: " + bellmanAlg.getPath("11Start", "84End").getVertexList() +"\n");
+		end = System.nanoTime();
+		bellmanTime = end-start;
+		System.out.println("Bellman Ford Shortest Path: " + bellmanAlg.getPath("11Start", "84End").getVertexList());
+		System.out.println("Bellman Ford Time: " + bellmanTime + "\n");
 		
 		//Dijkstra Algorithm 
+		start = System.nanoTime();
 		DijkstraShortestPath<String, DefaultEdge> dijkstraAlg = new DijkstraShortestPath<>(marioGraph3);
-	    System.out.println("Dijkstra Shortest Path: " + dijkstraAlg.getPath("11Start", "84End").getVertexList() + "\n");
-
-	    //Kruskal Algorithm
-	    KruskalMinimumSpanningTree<String, DefaultEdge> kruskalAlg = new KruskalMinimumSpanningTree<String, DefaultEdge>(marioGraph3);
-	    System.out.println(kruskalAlg.getSpanningTree());    
-	    
+	    end = System.nanoTime();
+	    dijkstraTime = end-start;
+		System.out.println("Dijkstra Shortest Path: " + dijkstraAlg.getPath("11Start", "84End").getVertexList());
+		System.out.println("Dijsktra Time: " + dijkstraTime + "\n");
 	}
 	
 	//Create a weighted graph containing Mario levels, weighted by blocks traveled
-	private static Graph<String, DefaultEdge> createGraph()
+	private static SimpleDirectedWeightedGraph<String, DefaultEdge> createGraph()
 	{
-		Graph<String, DefaultEdge> graph = new SimpleDirectedWeightedGraph<String, DefaultEdge>(DefaultEdge.class);
+		SimpleDirectedWeightedGraph<String, DefaultEdge> graph = new SimpleDirectedWeightedGraph<String, DefaultEdge>(DefaultEdge.class);
 		
 		//Level 1-1 vertices
 		graph.addVertex("11Start");
