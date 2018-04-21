@@ -14,44 +14,72 @@ public class graphDriver
 
 	public static void main(String[] args) 
 	{
+		//Timing variables
 		long start;
 		long end;
-		long aTime;
-		long bellmanTime;
-		long dijkstraTime;
+		long aTime = 0;
+		long bellmanTime = 0;
+		long dijkstraTime = 0;
+		SimpleDirectedWeightedGraph<String, DefaultEdge>[] aStarArray = new SimpleDirectedWeightedGraph[100];
+		SimpleDirectedWeightedGraph<String, DefaultEdge>[] bellmanArray = new SimpleDirectedWeightedGraph[100];
+		SimpleDirectedWeightedGraph<String, DefaultEdge>[] dijkstraArray = new SimpleDirectedWeightedGraph[100];
 		
 		//Create graph and set of vertices
 		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph = createGraph();
 		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph2 = createGraph();
 		SimpleDirectedWeightedGraph<String, DefaultEdge> marioGraph3 = createGraph();
 		Set<String> marioGraphVerts = marioGraph.vertexSet();
-		System.out.println(marioGraph.toString() +"\n");
+		System.out.println("Graph vertices and edges: " + marioGraph.toString() +"\n");
 		
-		//A* Algorithm
-		start = System.nanoTime();
+		//A* Algorithm output
 		ALTAdmissibleHeuristic<String, DefaultEdge> aStarHeuristic = new ALTAdmissibleHeuristic<String, DefaultEdge>(marioGraph, marioGraphVerts);
 		AStarShortestPath<String, DefaultEdge> aStarAlg = new AStarShortestPath<String, DefaultEdge>(marioGraph, aStarHeuristic);
-		end = System.nanoTime();
-		aTime = end-start;
-		System.out.println("A* Heuristic: " + aStarHeuristic.getCostEstimate("11Start", "84End"));
-		System.out.println("A* Shortest Path:" + aStarAlg.getPath("11Start", "84End").getVertexList());
-		System.out.println("A* Time: " + aTime + "\n");
+		System.out.println("A* Heuristic Weight: " + aStarHeuristic.getCostEstimate("11Start", "84End"));
+		System.out.println("A* Shortest Path:" + aStarAlg.getPath("11Start", "84End").getVertexList() + "\n");
 		
-		//Bellman Ford Algorithm
-		start = System.nanoTime();
+		//Bellman Ford Algorithm output
 		BellmanFordShortestPath<String, DefaultEdge> bellmanAlg = new BellmanFordShortestPath<String, DefaultEdge>(marioGraph2);
-		end = System.nanoTime();
-		bellmanTime = end-start;
-		System.out.println("Bellman Ford Shortest Path: " + bellmanAlg.getPath("11Start", "84End").getVertexList());
-		System.out.println("Bellman Ford Time: " + bellmanTime + "\n");
+		System.out.println("Bellman Ford Shortest Path: " + bellmanAlg.getPath("11Start", "84End").getVertexList() + "\n");
 		
-		//Dijkstra Algorithm 
-		start = System.nanoTime();
+		//Dijkstra Algorithm output
 		DijkstraShortestPath<String, DefaultEdge> dijkstraAlg = new DijkstraShortestPath<>(marioGraph3);
-	    end = System.nanoTime();
-	    dijkstraTime = end-start;
-		System.out.println("Dijkstra Shortest Path: " + dijkstraAlg.getPath("11Start", "84End").getVertexList());
-		System.out.println("Dijsktra Time: " + dijkstraTime + "\n");
+		System.out.println("Dijkstra Shortest Path: " + dijkstraAlg.getPath("11Start", "84End").getVertexList() + "\n");
+		
+		//Ensure all graphs being manipulated are previously untouched
+		for(int x=0; x<100; x++)
+		{
+			aStarArray[x] = createGraph();
+			bellmanArray[x] = createGraph();
+			dijkstraArray[x] = createGraph();
+		}
+		
+		//100 time trials
+		for(int y=0; y<100; y++)
+		{
+			//A* timing
+			start = System.nanoTime();
+			ALTAdmissibleHeuristic<String, DefaultEdge> aStarHeuristicTiming = new ALTAdmissibleHeuristic<String, DefaultEdge>(aStarArray[y], marioGraphVerts);
+			AStarShortestPath<String, DefaultEdge> aStarAlgTiming = new AStarShortestPath<String, DefaultEdge>(aStarArray[y], aStarHeuristic);
+			end = System.nanoTime();
+			aTime += end-start;
+			
+			//Bellman Ford timing
+			start = System.nanoTime();
+			BellmanFordShortestPath<String, DefaultEdge> bellmanAlgTiming = new BellmanFordShortestPath<String, DefaultEdge>(bellmanArray[y]);
+			end = System.nanoTime();
+			bellmanTime += end-start;
+			
+			//Dijkstra timing
+			start = System.nanoTime();
+			DijkstraShortestPath<String, DefaultEdge> dijkstraAlgTiming = new DijkstraShortestPath<>(dijkstraArray[y]);
+			end = System.nanoTime();
+			dijkstraTime += end-start;
+		}
+		
+		//Print average times
+		System.out.println("A* Time: " + (double)aTime/100);
+		System.out.println("Bellman Ford Time: " + (double)bellmanTime/100);
+		System.out.println("Dijkstra Time: " + (double)dijkstraTime/100);
 	}
 	
 	//Create a weighted graph containing Mario levels, weighted by blocks traveled
